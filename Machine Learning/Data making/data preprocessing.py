@@ -17,7 +17,7 @@ y = data_set.iloc[:, -1].values
 
 # Handling missing data (Replacing missing data with the mean value)
 imputer = SimpleImputer(missing_values=np.nan, strategy='mean')
-imputer.fit(X[:, 1:3])
+print(imputer.fit(X[:, 1:3]))
 X[:, 1:3] = imputer.transform(X[:, 1:3])
 
 # Encoding categorical x
